@@ -9,6 +9,12 @@ sort_funcs = [
             sorting.comb_sort,
             sorting.insert_sort,
             sorting.sel_sort,
+            sorting.shell_sort,
+            sorting.radix_sort,
+            sorting.heap_sort,
+            sorting.merge_sort,
+            sorting.quicksort,
+            
             
             ]
 
