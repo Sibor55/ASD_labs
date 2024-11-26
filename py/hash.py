@@ -1,14 +1,10 @@
-# Задание 13
-
-
 # Определяем хеш-таблицу
 class HashTable:
     def __init__(self, size):
         self.size = size
-        self.table = [None for _ in range(size)]  # Создаем список списков
+        self.table = [None for _ in range(size)]
 
     def hash_function(self, key):
-        # Простая хеш-функция (например, сумма кодов символов)
         return sum(ord(char) for char in key) % self.size
 
     def insert(self, key):
@@ -33,21 +29,16 @@ class HashTable:
                 print(f"Index {index}: {items}")
 
 
-# Функция для чтения файла и заполнения хеш-таблицы
 def fill_hash_table_from_file(filename, hash_table):
     with open(filename, "r", encoding="utf-8") as file:
         for line in file:
-            words = line.strip().split()  # Разбиваем строку на слова
+            words = line.strip().split()
             for word in words:
-                hash_table.insert(word)  # Вставляем каждое слово в хеш-таблицу
+                hash_table.insert(word)
 
 
-# Основная часть
-
-filename = "py\\text.txt"  # Укажите имя вашего файла
-print("1")
-hash_table = HashTable(30)  # Создаем хеш-таблицу с размером 10
-print("2")
-fill_hash_table_from_file(filename, hash_table)  # Заполняем хеш-таблицу
+filename = "py\\text.txt"
+hash_table = HashTable(30)
+fill_hash_table_from_file(filename, hash_table)
 print("Содержимое хеш-таблицы:")
-hash_table.display()  # Выводим содержимое хеш-таблицы
+hash_table.display()
