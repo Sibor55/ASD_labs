@@ -1,28 +1,5 @@
 """
 (https://en.wikipedia.org/wiki/Tree_traversal)
-Pre-order, NLR
-
-    Visit the current node (in the figure: position red).
-    Recursively traverse the current node's left subtree.
-    Recursively traverse the current node's right subtree.
-
-The pre-order traversal is a topologically sorted one, because a parent node is processed before any of its child nodes is done.
-Post-order, LRN
-
-    Recursively traverse the current node's left subtree.
-    Recursively traverse the current node's right subtree.
-    Visit the current node (in the figure: position blue).
-
-Post-order traversal can be useful to get postfix expression of a binary expression tree.
-In-order, LNR
-
-    Recursively traverse the current node's left subtree.
-    Visit the current node (in the figure: position green).
-    Recursively traverse the current node's right subtree.
-
-In a binary search tree ordered such that in each node the key is greater than
-all keys in its left subtree and less than all keys in its right subtree,
-in-order traversal retrieves the keys in ascending sorted order
 """
 
 
